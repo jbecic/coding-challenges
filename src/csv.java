@@ -6,14 +6,13 @@ public class csv {
     public static void readCsv() throws FileNotFoundException {
         String delimiter = ",";
         try {
-            File file = new File("/Users/jasminbecic/Library/CloudStorage/OneDrive-Personal/Book1.csv");
+            File file = new File("/Users/jasminbecic/Desktop/CSVMAY5.csv");
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String line = " ";
             String[] tempArr;
             while ((line = br.readLine()) != null) {
                 tempArr = line.split(delimiter);
-                System.out.println(Arrays.toString(tempArr) + tempArr.length);
                 for (String tempStr: tempArr) {
                     System.out.print(tempStr + " ");
                 }
